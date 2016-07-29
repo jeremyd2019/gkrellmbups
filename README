@@ -1,0 +1,66 @@
+GKrellM Belkin UPS Plugin
+=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ Version: 2.0.0
+  Author: Chris Page
+   Email: chris@starforge.co.uk
+Homepage: http://www.starforge.co.uk/gkrellm/
+
+Copyright (c)2001-2003 by Chris Page. Released as free software under the terms
+of the GNU General Public License, read the COPYING file for more information.
+
+
+Description
+=-=-=-=-=-=
+This plugin communicates with a Belkin Sentry Bulldog or Network UPS Tools 
+server and displays various pieces of status information:
+
+    * Input, output and battery voltages.
+    * Input and output AC frequency.
+    * UPS load and temperature.
+    * UPS status messages.
+
+Under NUT some or more of these variables may not be displayed, it all depends
+on whether the NUT driver for your UPS can make the information available.
+
+
+Notes on Mains
+=-=-=-=-=-=-=-
+
+Mains voltages are typically 220 to 240 in the UK, this presented some problems
+with fitting any sort of meaningful data on the chart - either the chart is 
+prohibitively large or any difference between the signals is swamped by the 
+scale. Subtracting a value from the input and output voltages before display 
+ensures that both signals will fit on the display without significant loss of 
+detail on a 40/50 pixel high monitor. The Mains option in the configuration
+should be approximately the same as the UPS low voltage transfer value (187v 
+on a UK Belkin UPS). US users will probably want to lower this to 90 or 100v
+using the option in the preferences panel.
+
+
+Requirements
+=-=-=-=-=-=-
+To use this plugin you will need:
+
+    * GKrellM 2+ (and the associated development files)
+    * GTK+2 (and the associated development files)
+    * Belkin Sentry Bulldog software (supplied with your Belkin UPS) or
+      Network UPS Tools 1.2.1
+    
+The UPS server software must be installed and running for this plugin to 
+function correctly. Note that it is possible to monitor the status of a UPS 
+over a LAN (or even over the internet if you have a decent connection) so 
+you can use this plugin to monitor the status of a UPS connected to another 
+machine if you want. 
+
+
+Upgrading
+-=-=-=-=-
+
+The major change visible to anyone who has used my plugin in the past 
+(after the addition of NUT support) will be the modifications I have made 
+to the preferences. This version of GKrellMBUPS will understand the chart
+settings for previous versions, but you will need to check the connection
+settings in the preferences otherwise the plugin may not be able to connect
+to the ups server. 
+

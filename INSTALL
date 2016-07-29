@@ -1,0 +1,50 @@
+Installation Instructions
+=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Before starting the installation, please check that you have all the standard
+compilation tools (gcc, make etc), gtk2-devel, glib2-devel (or similar packages)
+and the gkrellm2 development files installed. The configure script does not check 
+that your GTK+2 installation is valid, so make sure of this yourself!
+
+To compile and install the plugin, do the following from inside the gkrellmbups
+directory:
+
+% ./configure
+% make
+% su
+Password: <enter the root password>
+% make install
+
+This will make gkrellmbups available to all users on your system. If you only
+need it for your user, do the following:
+
+% ./configure
+% make
+% cp src/gkrellmbups ~/gkrellm/plugins/gkrellmbups.so
+
+(note that the .so is important!). 
+
+As something has gone wrong already (what, you mean you're reading the docs
+before you have a problem? Are you mad?!?), check what config.log says
+configure is barfing about. If you can't work out what is happening from 
+that, wave a small dead chicken over your computer. If that doesn't help, email
+me (address is in the README) and I'll see if I can help. Or at least recommend
+a good band of dead chicken. Remember to send me the config.log with your 
+email. Archived please, because those things get rediculously big.  
+
+
+Network UPS Tools
+=-=-=-=-=-=-=-=-=
+
+By default NUT support *IS NOT* compiled into the plugin. In order to enable
+NUT support you should pass the argument --enable-nut to the configure script:
+
+% ./configure --enable-nut
+..etc..
+
+will compile GKrellMBUPS with NUT support. Remember that configure provides
+a numbr of options aside from this - if you don't know what they are
+
+% ./configure --help
+
+may help, or it may just cause more confusion. That is what computers are for.

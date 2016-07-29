@@ -1,0 +1,7 @@
+TODO
+====
+
+o Clean up some of the NUT code in ups_connect.c
+o Add the option to remove Sentry Bulldog code during compilation
+o Alerts?
+o autoconf needs work...

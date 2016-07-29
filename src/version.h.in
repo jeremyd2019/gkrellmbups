@@ -1,0 +1,11 @@
+#ifndef _VERSION_H
+#define _VERSION_H 1
+
+#define PACKAGE                    "@PACKAGE@"
+#define GKRELLMBUPS_VERSION_MAJOR  @MAJOR_VERSION@
+#define GKRELLMBUPS_VERSION_MINOR  @MINOR_VERSION@
+#define GKRELLMBUPS_VERSION_REV    @MICRO_VERSION@
+#define VERSION                    "@VERSION@"
+#define PROG_VERSION               "gkrellmbups version "VERSION
+
+#endif /* _VERSION_H */

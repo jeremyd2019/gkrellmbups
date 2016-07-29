@@ -1,0 +1,13 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Include support for cennting to a NUT server */
+#undef ENABLE_NUT
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION
