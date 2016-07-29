@@ -53,7 +53,7 @@ AC_CHECK_FILE(/usr/local/include/gkrellm/gkrellm.h,
         ac_cv_got_gkrellm=no)
 
 if test $ac_cv_got_gkrellm = no; then
-   AC_CHECK_FILE(/usr/include/gkrell/gkrellm.h,,
+   AC_CHECK_FILE(/usr/include/gkrellm2/gkrellm.h,,
         AC_MSG_ERROR(Test for GKrellM headers failed. See the file 'INSTALL' for help.))
 fi
 
