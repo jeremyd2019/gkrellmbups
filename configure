@@ -2585,8 +2585,8 @@ else
 fi
 
 if test $ac_cv_got_gkrellm = no; then
-   echo "$as_me:2588: checking for /usr/include/gkrell/gkrellm.h" >&5
-echo $ECHO_N "checking for /usr/include/gkrell/gkrellm.h... $ECHO_C" >&6
+   echo "$as_me:2588: checking for /usr/include/gkrellm2/gkrellm.h" >&5
+echo $ECHO_N "checking for /usr/include/gkrellm2/gkrellm.h... $ECHO_C" >&6
 if test "${ac_cv_file__usr_include_gkrell_gkrellm_h+set}" = set; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
@@ -2594,7 +2594,7 @@ else
   { { echo "$as_me:2594: error: cannot check for file existence when cross compiling" >&5
 echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
    { (exit 1); exit 1; }; }
-if test -r "/usr/include/gkrell/gkrellm.h"; then
+if test -r "/usr/include/gkrellm2/gkrellm.h"; then
   ac_cv_file__usr_include_gkrell_gkrellm_h=yes
 else
   ac_cv_file__usr_include_gkrell_gkrellm_h=no
