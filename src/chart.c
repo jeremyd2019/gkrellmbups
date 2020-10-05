@@ -488,6 +488,7 @@ static void create_chart(GtkWidget *vbox, BUPSChart *data, gint firstCreate, gch
 void bups_create_plugin(GtkWidget *vbox, gint firstCreate)
 {
     gint labelWidth;
+    GdkFont* font;
 
     if(firstCreate) {
         bups_data -> vbox = gtk_vbox_new(FALSE, 0);
@@ -512,7 +513,8 @@ void bups_create_plugin(GtkWidget *vbox, gint firstCreate)
                                                      gkrellm_meter_textstyle(bups_style_id), 
                                                      bups_data -> log_style, -1, -1, -1);
 
-    labelWidth = gdk_string_width(bups_data -> label_decal -> text_style.font, bups_data -> log_label);
+    font = gdk_font_from_description(bups_data -> label_decal -> text_style.font);
+    labelWidth = gdk_string_width(font, bups_data -> log_label);
     if(labelWidth < bups_data -> label_decal -> w) {
         bups_data -> label_x = (bups_data -> label_decal -> w - labelWidth) / 2;
     } else {
